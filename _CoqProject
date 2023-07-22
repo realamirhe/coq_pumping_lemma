@@ -2,6 +2,7 @@
 allrules.v
 chomsky.v
 emptyrules.v
+misc_arith.v
 misc_list.v
 pumping.v
 union.v
@@ -13,7 +14,6 @@ simplification.v
 unitrules.v
 cfl.v
 concatenation.v
-misc_arith.v
 pigeon.v
 trees.v
 useless.v

@@ -790,7 +790,7 @@ unfold produces, generates.
 intros g w.
 rewrite derives_equiv_derives6.
 intros [n].
-generalize (Le.le_refl n).
+generalize (le_refl n).
 generalize n at 1 as i.
 generalize dependent w.
 induction n.
