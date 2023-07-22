@@ -1,0 +1,12 @@
+!.v
+*.vo
+*.glob
+*.vok
+*.vos
+*.aux
+*.d
+*.cache
+*.conf
+
+Makefile
+tmp/
