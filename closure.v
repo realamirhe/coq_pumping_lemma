@@ -1,5 +1,6 @@
 Require Import List.
 Require Import Lia.
+Require Import Arith.
 
 Require Import misc_list.
 Require Import cfg.
@@ -807,91 +808,6 @@ induction n.
     exists [[t];w].
     simpl.
     admit.
-  (* + lia.
-- intros.
-  inversion H0.
-  clear H0.
-  + destruct w.
-    * inversion H4.
-    * inversion H4.
-  + simpl in H1.
-    inversion H1.
-    assert (s1 = []).
-      {
-      destruct s1.
-      - reflexivity.
-      - inversion H7.
-        destruct s1.
-        + inversion H9.
-        + inversion H9.
-      }
-    assert (s2 = []).
-      {
-      rewrite H6 in H1.
-      inversion H1.
-      reflexivity.
-      }
-    subst.
-    simpl in *.
-    inversion H2.
-    clear H2.
-    subst.
-    * rewrite app_nil_r in H4.
-      apply derives6_split in H4.
-      destruct H4 as [s1 [s2 [n1 [n2 [HH1 [HH2 [HH3 HH4]]]]]]].
-      symmetry in HH1.
-      apply map_expand in HH1.
-      destruct HH1 as [w1 [w2 [Hw [Hw1 Hw2]]]].
-      subst.
-      assert (Hn1: n1 <= n).
-        {
-        lia.
-        }
-      specialize (IHn w1 _ Hn1 HH3).
-      destruct IHn as [w1' [Hw1A Hw1B]].
-      exists (w1' ++ [w2]).
-      {
-      split.
-      - intros.
-        apply in_app_or in H2.
-        destruct H2 as [H2 | H2].
-        + auto.
-        + simpl in H2.
-          destruct H2 as [H2 | H2].
-          * subst.
-            {
-            eapply derives_g_clo_derives_g.
-            - rewrite derives_equiv_derives6.
-              exists n2.
-              eauto.
-            - reflexivity.
-            }
-          * contradiction.
-      - rewrite flat_app.
-        simpl.
-        subst.
-        rewrite app_nil_r.
-        reflexivity.
-      }
-    * rewrite <- H5 in H4.
-      simpl in H4.
-      {
-      inversion H4.
-      - exists [].
-        split.
-        + intros s0 H11.
-          inversion H11.
-        + symmetry in H10.
-          apply map_eq_nil in H10.
-          rewrite H10.
-          simpl.
-          reflexivity.
-      - destruct s1.
-        + inversion H6.
-        + inversion H6.
-      }
-    * rewrite <- H5 in H1.
-      inversion H1. *)
 Admitted.
 
 End Closure.

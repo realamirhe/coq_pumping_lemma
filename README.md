@@ -8,5 +8,5 @@ make -f Makefile
 ### Cleanup
 
 ```bash
-cd context-free-language && python remove.py
+python remove.py
 ```
